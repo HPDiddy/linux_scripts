@@ -6,7 +6,7 @@ function chklogDir {
 	then 
 	echo "$(date -u)  The log folder was found"  >> /home/$USER/.logs/"$(date '+%Y-%m-%d')-prometheus.log"
 	else 
-		echo "$(date -u)  The log folder could not be found, Creating it now"
+		echo "$(date -u)  The log folder could not be found, Creating it now" >> /home/$USER/.logs/"$(date '+%Y-%m-%d')-prometheus.log"
 		mkdir /home/$USER/.logs/
 	fi
 }
